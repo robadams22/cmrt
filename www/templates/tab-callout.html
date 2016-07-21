@@ -1,0 +1,66 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>SARCALL - Callout</h2>
+   <ion-list>
+            <ion-item>
+    <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SAR A {member} {message}">
+      <div class="radio-content">
+            <div class="item-content">
+   Available (Add time to RV)
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+                
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SAR L {member} {message}">
+      <div class="radio-content">
+            <div class="item-content">
+    Delayed
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+           
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SAR N {message}">
+      <div class="radio-content">
+            <div class="item-content">
+Not Available
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SAR H {message}">
+      <div class="radio-content">
+            <div class="item-content">
+At Home
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+
+ 
+                
+ 
+   
+            </ion-item>
+            <ion-item>
+          <label class="item item-input">
+            <span class="input-label">Message</span>
+            <input type="text" ng-model="sms.message">
+          </label>
+            </ion-item>
+            <ion-item>
+          <button class="button button-full button-positive" ng-click="sendSms(sms)">
+            Send
+          </button>
+            </ion-item>
+        </ion-list>
+      
+      Message Format: {{fullmessage}}
+  </ion-content>
+</ion-view>

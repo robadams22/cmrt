@@ -1,0 +1,112 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>SARCALL - Leadership</h2>
+   <ion-list>
+            <ion-item>
+    <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SMS {team} FT {message}">
+      <div class="radio-content">
+            <div class="item-content">
+    Full Team
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+                
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SMS {team} TL {message}">
+      <div class="radio-content">
+            <div class="item-content">
+    Team Leaders
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+           
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SMS {team} G1 {message}">
+      <div class="radio-content">
+            <div class="item-content">
+  Water Team
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SMS {team} G2 {message}">
+      <div class="radio-content">
+            <div class="item-content">
+  Steep Ground Group
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="SMS {team} G3 {message}">
+      <div class="radio-content">
+            <div class="item-content">
+  Committee
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+                
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="LOGSTART {team} {message}">
+      <div class="radio-content">
+            <div class="item-content">
+  Start a log
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+                
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="LOG {message}">
+      <div class="radio-content">
+            <div class="item-content">
+  Add log event
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="STL">
+      <div class="radio-content">
+            <div class="item-content">
+  Response Details
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+                
+ <label class="item item-radio">
+    <input type="radio" ng-model="sms.choice" value="RESET {team}">
+      <div class="radio-content">
+            <div class="item-content">
+Clear Response Data
+                </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </div>
+  </label>
+   
+            </ion-item>
+            <ion-item>
+          <label class="item item-input">
+            <span class="input-label">Message</span>
+            <input type="text" ng-model="sms.message">
+          </label>
+            </ion-item>
+            <ion-item>
+          <button class="button button-full button-positive" ng-click="sendSms(sms)">
+            Send
+          </button>
+            </ion-item>
+        </ion-list>
+      
+      Message Format: {{fullmessage}}
+  </ion-content>
+</ion-view>
